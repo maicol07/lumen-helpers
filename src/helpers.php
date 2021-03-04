@@ -52,7 +52,7 @@ if (! function_exists('mix')) {
     function mix($path, $manifestDirectory = '')
     {
         static $manifests = [];
-        if (! starts_with($path, '/')) {
+        if (! Str::startsWith($path, '/')) {
             $path = "/{$path}";
         }
         if ($manifestDirectory && ! starts_with($manifestDirectory, '/')) {
